@@ -1,0 +1,1 @@
+Index.html in the root folder here is a re-direct to voice. This will need to be removed or dealt with when a main site exists
