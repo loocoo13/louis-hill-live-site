@@ -37,8 +37,8 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-y: auto;
         }
 
         .container {
@@ -47,7 +47,7 @@
             gap: 56px;
             max-width: 1320px;
             margin: 0 auto;
-            height: 100vh;
+            min-height: 100vh;
             padding: 4vh 40px;
             align-items: center;
         }
@@ -258,6 +258,13 @@
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: all 0.2s ease;
+        }
+
+        .download-link svg {
+            width: 10px;
+            height: 10px;
+            margin-left: 4px;
+            vertical-align: -1px;
         }
 
         .download-link:hover {
@@ -508,75 +515,11 @@
                 <h2 class="demos-header">Demos</h2>
                 <div class="audio-grid">
                     
-                    <!-- Reel 1: Commercial -->
-                    <div class="audio-card" data-src="commercial.mp3">
-                        <div class="card-top">
-                            <span class="reel-title">Commercial</span>
-                            <a href="commercial.mp3" download="Louis Hill - Commercial Reel.mp3" class="download-link">Download</a>
-                        </div>
-                        <div class="custom-controls">
-                            <button class="play-btn" aria-label="Play commercial reel">▶</button>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="time-display">0:00 / 0:00</span>
-                        </div>
-                        <audio src="commercial.mp3" preload="metadata"></audio>
-                    </div>
-
-                    <!-- Reel 2: Audiobook -->
-                    <div class="audio-card" data-src="audiobook.mp3">
-                        <div class="card-top">
-                            <span class="reel-title">Audiobook</span>
-                            <a href="audiobook.mp3" download="Louis Hill - Audiobook Reel.mp3" class="download-link">Download</a>
-                        </div>
-                        <div class="custom-controls">
-                            <button class="play-btn" aria-label="Play audiobook reel">▶</button>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="time-display">0:00 / 0:00</span>
-                        </div>
-                        <audio src="audiobook.mp3" preload="metadata"></audio>
-                    </div>
-
-                    <!-- Reel 3: Narration -->
-                    <div class="audio-card" data-src="narration.mp3">
-                        <div class="card-top">
-                            <span class="reel-title">Narration</span>
-                            <a href="narration.mp3" download="Louis Hill - Narration Reel.mp3" class="download-link">Download</a>
-                        </div>
-                        <div class="custom-controls">
-                            <button class="play-btn" aria-label="Play narration reel">▶</button>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="time-display">0:00 / 0:00</span>
-                        </div>
-                        <audio src="narration.mp3" preload="metadata"></audio>
-                    </div>
-
-                    <!-- Reel 4: Animation -->
-                    <div class="audio-card" data-src="animation.mp3">
-                        <div class="card-top">
-                            <span class="reel-title">Animation</span>
-                            <a href="animation.mp3" download="Louis Hill - Animation Reel.mp3" class="download-link">Download</a>
-                        </div>
-                        <div class="custom-controls">
-                            <button class="play-btn" aria-label="Play animation reel">▶</button>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <span class="time-display">0:00 / 0:00</span>
-                        </div>
-                        <audio src="animation.mp3" preload="metadata"></audio>
-                    </div>
-
-                    <!-- Reel 5: Computer Games -->
+                    <!-- Reel 1: Computer Games -->
                     <div class="audio-card" data-src="computer-games.mp3">
                         <div class="card-top">
                             <span class="reel-title">Computer Games</span>
-                            <a href="computer-games.mp3" download="Louis Hill - Computer Games Reel.mp3" class="download-link">Download</a>
+                            <a href="computer-games.mp3" download="Louis Hill - Computer Games Reel.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
                         </div>
                         <div class="custom-controls">
                             <button class="play-btn" aria-label="Play computer games reel">▶</button>
@@ -588,11 +531,75 @@
                         <audio src="computer-games.mp3" preload="metadata"></audio>
                     </div>
 
+                    <!-- Reel 2: Animation -->
+                    <div class="audio-card" data-src="animation.mp3">
+                        <div class="card-top">
+                            <span class="reel-title">Animation</span>
+                            <a href="animation.mp3" download="Louis Hill - Animation Reel.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
+                        </div>
+                        <div class="custom-controls">
+                            <button class="play-btn" aria-label="Play animation reel">▶</button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                        <audio src="animation.mp3" preload="metadata"></audio>
+                    </div>
+
+                    <!-- Reel 3: Commercial -->
+                    <div class="audio-card" data-src="commercial.mp3">
+                        <div class="card-top">
+                            <span class="reel-title">Commercial</span>
+                            <a href="commercial.mp3" download="Louis Hill - Commercial Reel.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
+                        </div>
+                        <div class="custom-controls">
+                            <button class="play-btn" aria-label="Play commercial reel">▶</button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                        <audio src="commercial.mp3" preload="metadata"></audio>
+                    </div>
+
+                    <!-- Reel 4: Audiobook -->
+                    <div class="audio-card" data-src="audiobook.mp3">
+                        <div class="card-top">
+                            <span class="reel-title">Audiobook</span>
+                            <a href="audiobook.mp3" download="Louis Hill - Audiobook Reel.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
+                        </div>
+                        <div class="custom-controls">
+                            <button class="play-btn" aria-label="Play audiobook reel">▶</button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                        <audio src="audiobook.mp3" preload="metadata"></audio>
+                    </div>
+
+                    <!-- Reel 5: Narration -->
+                    <div class="audio-card" data-src="narration.mp3">
+                        <div class="card-top">
+                            <span class="reel-title">Narration</span>
+                            <a href="narration.mp3" download="Louis Hill - Narration Reel.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
+                        </div>
+                        <div class="custom-controls">
+                            <button class="play-btn" aria-label="Play narration reel">▶</button>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="time-display">0:00 / 0:00</span>
+                        </div>
+                        <audio src="narration.mp3" preload="metadata"></audio>
+                    </div>
+
                     <!-- Reel 6: Home Studio Read -->
                     <div class="audio-card" data-src="home-studio-read.mp3">
                         <div class="card-top">
                             <span class="reel-title">Home Studio Read</span>
-                            <a href="home-studio-read.mp3" download="Louis Hill - Home Studio Read.mp3" class="download-link">Download</a>
+                            <a href="home-studio-read.mp3" download="Louis Hill - Home Studio Read.mp3" class="download-link">Download<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v8m-3-3 3 3 3-3M3 11v3h10v-3"/></svg></a>
                         </div>
                         <div class="custom-controls">
                             <button class="play-btn" aria-label="Play home studio reel">▶</button>
